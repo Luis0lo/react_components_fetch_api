@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+// import ListOfStarwards from '../ListOfStarwards';
+// import ExpandInfo from '../ExpandInfo'
 
 const Starwards = () => {
   //create a state to set the name to fetch

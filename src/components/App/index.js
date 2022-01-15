@@ -1,9 +1,9 @@
 import './App.css';
-import Starwards from '../StarwardsSearch';
+import StarwardsSearch from '../StarwardsSearch';
 function App() {
   return (
     <div className="App">
-      <Starwards />
+      <StarwardsSearch />
     </div>
   );
 }
