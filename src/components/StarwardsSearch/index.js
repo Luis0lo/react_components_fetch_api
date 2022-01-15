@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 // import ListOfStarwards from '../ListOfStarwards';
 // import ExpandInfo from '../ExpandInfo'
-import Input from '../Input'
+import Input from '../Input';
+import Button from '../Button';
+
 const Starwards = () => {
   //create a state to set the name to fetch
   const [search, setSearch] = useState('');
@@ -64,13 +66,17 @@ const Starwards = () => {
         >
           Another Search
         </button>
+        {/* <Button 
+                text={'Another Search'}
+                hideListOnClik={() => setExpand(false)}
+              /> */}
       </div>
     );
 
   return listOfStarwards ? (
     <div>
       <hr />
-      <Input searchOnChange={handleChange}/>
+      <Input searchOnChange={handleChange} />
 
       <h2>Best guess: {starwards.name}</h2>
 
@@ -80,14 +86,14 @@ const Starwards = () => {
         !expand &&
         listOfStarwards.map((star, i) => {
           return (
-            <>
+            <div key={i}>
               <h3>{star.name}</h3>
-              <button type="submit" onClick={() => handleExpand(star.name)}>
-                Expand
-              </button>
-
+              <Button
+                text={'Expand'}
+                expandOnClick={() => handleExpand(star.name)}
+              />
               <hr />
-            </>
+            </div>
           );
         })}
     </div>
