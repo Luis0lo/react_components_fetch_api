@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 // import ListOfStarwards from '../ListOfStarwards';
 // import ExpandInfo from '../ExpandInfo'
-
+import Input from '../Input'
 const Starwards = () => {
   //create a state to set the name to fetch
   const [search, setSearch] = useState('');
@@ -70,11 +70,7 @@ const Starwards = () => {
   return listOfStarwards ? (
     <div>
       <hr />
-      <input
-        type="text"
-        placeholder="search for you starward"
-        onChange={handleChange}
-      />
+      <Input searchOnChange={handleChange}/>
 
       <h2>Best guess: {starwards.name}</h2>
 
