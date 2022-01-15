@@ -59,17 +59,14 @@ const Starwards = () => {
         <p>
           <em>Mass:</em> {starwards.mass}
         </p>
-        <button
+        {/* <button
           onClick={() => {
             setExpand(false);
           }}
         >
           Another Search
-        </button>
-        {/* <Button 
-                text={'Another Search'}
-                hideListOnClik={() => setExpand(false)}
-              /> */}
+        </button> */}
+        <Button text={'Another Search'} onClick={() => setExpand(false)} />
       </div>
     );
 
@@ -88,10 +85,7 @@ const Starwards = () => {
           return (
             <div key={i}>
               <h3>{star.name}</h3>
-              <Button
-                text={'Expand'}
-                expandOnClick={() => handleExpand(star.name)}
-              />
+              <Button text={'Expand'} onClick={() => handleExpand(star.name)} />
               <hr />
             </div>
           );
